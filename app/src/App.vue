@@ -20,8 +20,18 @@
       return{
         rotaDinamica: {name: 'servicos'}
       }
+    },
+    created() {
+      const newUser = {
+        user: {
+          first_name1: 'Mah',
+          last_name1: 'GV',
+          email: 'marinasgv@hotmail.com'
+        },
+      }
+      console.log(this.$store.state.user);
+      this.$store.commit('storeUser', newUser);
     }
-  }
 </script>
 
 <style>
